@@ -1,9 +1,9 @@
-$:.unshift "lib"
-require "dm-salesforce-adapter/version"
+# $:.unshift "lib"
+# require "dm-salesforce-adapter"
 
 Gem::Specification.new do |s|
   s.name = "dm-salesforce-adapter"
-  s.version = SalesforceAdapter::VERSION
+  s.version = "1.0.1"
   s.platform = Gem::Platform::RUBY
   s.has_rdoc = true
   s.extra_rdoc_files = ["README.markdown", "LICENSE"]
