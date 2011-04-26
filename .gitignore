@@ -8,3 +8,4 @@ gbin
 tmp
 Gemfile.lock
 .bundle
+*.orig
