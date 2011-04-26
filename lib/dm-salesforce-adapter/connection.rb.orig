@@ -126,11 +126,12 @@ module DataMapper
           end
         end
 
+<<<<<<< HEAD
         def with_reconnection(&block)
           yield
         rescue SOAP::FaultError => error
           retry_count ||= 0
-          if error.faultcode.to_s =~ /INVALID_SESSION_ID/
+          if error.faultcode.to_s =~ "INVALID_SESSION_ID"
             DataMapper.logger.debug "Got a invalid session id; reconnecting" if DataMapper.logger
             @driver = nil
             login
@@ -142,6 +143,20 @@ module DataMapper
 
           raise SessionTimeout, "The Salesforce session could not be established"
         end
+=======
+    def with_reconnection(&block)
+      yield
+    rescue SOAP::FaultError => error
+      retry_count ||= 0
+      if error.faultcode.inspect.to_s =~ /INVALID_SESSION_ID/
+        DataMapper.logger.debug "Got a invalid session id; reconnecting" if DataMapper.logger
+        @driver = nil
+        login
+        retry_count += 1
+        retry unless retry_count > 5
+      else
+        raise error
+>>>>>>> Using a regex to poke at the SOAP fault object. This should resolve the TypeError
       end
     end
   end
