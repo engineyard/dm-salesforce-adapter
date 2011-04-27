@@ -1,4 +1,4 @@
-class SalesforceAdapter
+class SalesforceAdapter < ::DataMapper::Adapters::AbstractAdapter
   module SQL
     def conditions_statement(conditions, repository)
       case conditions

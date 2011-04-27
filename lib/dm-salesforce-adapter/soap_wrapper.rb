@@ -1,4 +1,4 @@
-class SalesforceAdapter
+class SalesforceAdapter < ::DataMapper::Adapters::AbstractAdapter
   class SoapWrapper
     class ClassesFailedToGenerate < StandardError; end
 

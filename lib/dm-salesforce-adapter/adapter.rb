@@ -1,5 +1,5 @@
 
-class SalesforceAdapter
+class SalesforceAdapter < ::DataMapper::Adapters::AbstractAdapter
   include SQL
 
   def initialize(name, uri_or_options)

@@ -1,6 +1,6 @@
 require 'dm-salesforce-adapter/connection/errors'
 
-class SalesforceAdapter
+class SalesforceAdapter < ::DataMapper::Adapters::AbstractAdapter
   class Connection
     include Errors
 
