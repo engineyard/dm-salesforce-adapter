@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'dm-core'
-require 'dm-salesforce'
+require 'dm-salesforce-adapter'
 
 class Account
   include DataMapper::Salesforce::Resource

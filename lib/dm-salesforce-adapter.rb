@@ -1,4 +1,3 @@
-require 'data_objects'
 require 'dm-core'
 require 'dm-types'
 require 'dm-validations'
