@@ -34,6 +34,10 @@ module DataMapper
         end
       end
 
+      def schema_name
+        'salesforce'
+      end
+
       def connection
         @connection ||= Connection.new(options["username"], options["password"], options["path"], options["apidir"])
       end
