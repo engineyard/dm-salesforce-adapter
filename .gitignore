@@ -9,3 +9,7 @@ tmp
 Gemfile.lock
 .bundle
 *.orig
+*.swp
+*.swo
+*.swn
+
