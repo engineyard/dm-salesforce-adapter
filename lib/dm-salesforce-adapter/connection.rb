@@ -130,7 +130,7 @@ module DataMapper
           yield
         rescue SOAP::FaultError => error
           retry_count ||= 0
-          if error.faultstring =~ /INVALID_SESSION_ID/
+          if error.to_s =~ /INVALID_SESSION_ID/
             DataMapper.logger.debug "Got a invalid session id; reconnecting" if DataMapper.logger
             @driver = nil
             login
