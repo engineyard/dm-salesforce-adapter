@@ -16,6 +16,10 @@ module DataMapper
           def typecast(value)
             [true, 1, '1', 'true', 'TRUE', TRUE].include?(value) ? TRUE : FALSE
           end
+
+          def custom?
+            true
+          end
         end
       end
     end
