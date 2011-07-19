@@ -188,6 +188,19 @@ module DataMapper
         properties = Array(klass.send(:salesforce_id_properties)).map { |p| p.to_sym } rescue []
         return properties.include?(property.name) ? value[0..14] : value
       end
+
+      def storage_exists?(model)
+        true
+      end
+
+      def upgrade_model_storage(model)
+      end
+
+      def create_model_storage(model)
+      end
+
+      def destroy_model_storage(model)
+      end
     end
   end
 end
