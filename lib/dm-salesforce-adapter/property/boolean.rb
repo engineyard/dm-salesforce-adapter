@@ -10,7 +10,7 @@ module DataMapper
           TRUE  = 1
 
           def load(value)
-            [true, 1, '1', 'true', 'TRUE', TRUE].include?(value) ? true : false
+            [true, 1, '1', 'true', 'TRUE', TRUE].include?(value)
           end
 
           def typecast(value)
