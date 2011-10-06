@@ -2,7 +2,7 @@ $:.unshift "lib"
 
 Gem::Specification.new do |s|
   s.name = "dm-salesforce-adapter"
-  s.version = '1.1.0'
+  s.version = '1.1.0.ey'
   s.platform = Gem::Platform::RUBY
   s.has_rdoc = true
   s.extra_rdoc_files = ["README.markdown", "LICENSE"]
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency "dm-core",        "~> 1.1.0"
   s.add_dependency "dm-validations", "~> 1.1.0"
   s.add_dependency "dm-types",       "~> 1.1.0"
-  s.add_dependency "soap4r",         "~> 1.5.8"
+  s.add_dependency "rubyjedi-soap4r", "~> 1.5.8"
 
   s.require_path = 'lib'
   s.files = %w(LICENSE README.markdown Rakefile) + Dir.glob("lib/**/*")
