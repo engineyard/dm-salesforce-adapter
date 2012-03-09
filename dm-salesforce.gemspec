@@ -1,7 +1,7 @@
 $:.unshift "lib"
 
 Gem::Specification.new do |s|
-  s.name = "dm-salesforce-adapter"
+  s.name = "dm-salesforce"
   s.version = '1.1.0.ey'
   s.platform = Gem::Platform::RUBY
   s.has_rdoc = true
